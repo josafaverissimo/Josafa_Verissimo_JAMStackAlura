@@ -1,10 +1,16 @@
-import styled from 'styled-components'
-
-const Title = styled.h1`
-  font-size: 50px;
-  color: ${({ theme }) => theme.colors.primary};
-`
+import React from 'react';
+import Capa from '../src/components/commons/Capa'
 
 export default function Home() {
-  return <Title>My page</Title>
+  return (
+    <div
+      style={{
+        display: 'flex',
+        flex: '1',
+        flexWrap: 'wrap'        
+      }}
+    >
+      <Capa />
+    </div>
+  )
 }
