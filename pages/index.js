@@ -1,5 +1,6 @@
 import React from 'react';
-import Capa from '../src/components/commons/Capa'
+import Capa from '../src/components/commons/Capa';
+import Cabecalho from '../src/components/commons/Cabecalho';
 
 export default function Home() {
   return (
@@ -11,6 +12,8 @@ export default function Home() {
       }}
     >
       <Capa />
+      
+      <Cabecalho />
     </div>
   )
 }
