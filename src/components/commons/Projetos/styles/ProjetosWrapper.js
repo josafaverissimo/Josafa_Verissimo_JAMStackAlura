@@ -6,6 +6,12 @@ export const ProjetosWrapper = styled.div`
   align-items: center;
   font-family: 'Fira Sans Condensed', sans-serif;
 
+  ul {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
   ul li {
     list-style: none;
   }

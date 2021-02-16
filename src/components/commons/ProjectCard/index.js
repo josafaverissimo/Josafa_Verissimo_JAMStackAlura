@@ -1,5 +1,5 @@
 import React from 'react';
-import { CardWrapper } from './styles/CardWrapper';
+import { Card } from './styles/Card';
 import { HighlightedCardWrapper } from './styles/HighlightedCardWrapper';
 
 function HighlightedCard() {
@@ -10,17 +10,18 @@ function HighlightedCard() {
   )
 }
 
-export default function Card({text, background, highlighted}) {
+export default function ProjectCard({text, background, highlighted}) {
+  console.log(highlighted)
   return (
-    <CardWrapper background={background}>
-      <div>
-        <HighlightedCard />
-      </div>
+    <Card.Wrapper>
+      <img src={background} />
 
-      <p>
+      {highlighted && <HighlightedCard />}
+
+      <Card.Text>
         {text}
-      </p>
-    </CardWrapper>
+      </Card.Text>
+    </Card.Wrapper>
   )
 }
 
