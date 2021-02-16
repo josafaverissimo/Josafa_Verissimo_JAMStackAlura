@@ -11,6 +11,8 @@ export const CapaWrapper = styled.div`
   justify-content: center;
   width: 100%;
 
+  min-height: 50vh;
+
   h1, p {
     font-family: 'Fira Sans Condensed', sans-serif;
   }
@@ -20,6 +22,6 @@ export const CapaWrapper = styled.div`
   }
 
   p {
-    font-weight: lighter;
+    font-weight: 300;
   }
 `;
