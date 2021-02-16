@@ -11,7 +11,6 @@ function HighlightedCard() {
 }
 
 export default function ProjectCard({text, background, highlighted}) {
-  console.log(highlighted)
   return (
     <Card.Wrapper>
       <img src={background} />

@@ -31,7 +31,6 @@ export default function Projetos() {
 
   orders[0].order = toTop.order;
   toTop.order = 1;
-  console.log("Orders: ", orders);
 
   return (
     <ProjetosWrapper>
