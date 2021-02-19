@@ -1,10 +1,6 @@
 import styled from 'styled-components';
 
 export const CapaWrapper = styled.div`
-  background-image: url('/images/plantBottomRight.png'), url('/images/plantTopLeft.png');
-  background-repeat: no-repeat;
-  background-position: right bottom, left top;
-  background-size: 250px 350px, 250px 350px;
 
   display: flex;
   align-items: center;

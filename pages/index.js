@@ -1,7 +1,6 @@
 import React from 'react';
 import Capa from '../src/components/commons/Capa';
 import Cabecalho from '../src/components/commons/Cabecalho';
-import Projetos from '../src/components/commons/Projetos';
 
 export default function Home() {
   return (
@@ -15,8 +14,6 @@ export default function Home() {
       <Capa />
 
       <Cabecalho />
-
-      <Projetos />
     </div>
   )
 }
