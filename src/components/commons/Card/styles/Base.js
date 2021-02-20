@@ -8,6 +8,17 @@ const Wrapper = styled.div`
   transition: .2s box-shadow ease-in-out;
   border-radius: 8px;
   ${({ highlighted }) => highlighted && css`
+    &::before {
+      content: "Destaque";
+      position: absolute;
+      height: 20px;
+      background: #fff;
+      text-align: center;
+      border: 1px solid #000;
+      padding: 10px 64px;
+      margin: 10px;
+    }
+
     ${breakpointsMedia({
       lg: css`
         display: flex;
