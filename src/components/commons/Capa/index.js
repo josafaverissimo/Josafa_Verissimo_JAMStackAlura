@@ -6,16 +6,18 @@ export default function Capa() {
   return (
     <CapaWrapper>
       <img src="/images/plantTopLeft.png" style={{
-        alignSelf: 'flex-start',
-        marginRight: 'auto'
+        alignSelf: "flex-start",
+        marginBottom: "auto"
       }}/>
-      <Title>
+
+      <Title textAlign="center" width="min-content">
         <h1>Josafá Veríssimo</h1>
         <p>Portfolio</p>
       </Title>
+      
       <img src="/images/plantBottomRight.png" style={{
-        alignSelf: 'flex-end',
-        marginLeft: 'auto'
+        marginTop: "auto",
+        alignSelf: "flex-end"
       }}/>
     </CapaWrapper>
   )

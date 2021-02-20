@@ -3,22 +3,29 @@ import { breakpointsMedia } from '../../../theme/utils/breakpointsMedia';
 import { propToStyle } from '../../../theme/utils/propToStyle';
 
 export const Title = styled.div`
-  text-align: center;
+  ${propToStyle("textAlign")}
+
+  ${propToStyle("margin")}
 
   h1 {
-    width: min-content;
+    ${propToStyle("width")}
     font-size: 4rem;
     padding: 0;
     margin: 0;
 
     ${breakpointsMedia({
-    xs: css`
-      font-size: 4rem;
-    `,
-    sm: css`
-      font-size: 5rem;
-    `
-  })}
+      xs: css`
+        font-size: 4rem;
+      `,
+      sm: css`
+        font-size: 5rem;
+      `
+    })}
+
+    ${propToStyle("margin")}
+    ${propToStyle("fontWeight")}
+    ${propToStyle("fontSize")}
+    ${propToStyle("fontFamily")}
   }
 
   p {
@@ -27,13 +34,18 @@ export const Title = styled.div`
     padding: 0;
 
     ${breakpointsMedia({
-    xs: css`
-      font-size: 4rem;
-    `,
-    sm: css`
-      font-size: 5rem;
-    `
-  })}
+      xs: css`
+        font-size: 4rem;
+      `,
+      sm: css`
+        font-size: 5rem;
+      `
+    })}
+
+    ${propToStyle("margin")}
+    ${propToStyle("fontWeight")}
+    ${propToStyle("fontSize")}
+    ${propToStyle("fontFamily")}
   }
   
 `;
