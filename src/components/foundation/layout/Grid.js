@@ -82,6 +82,17 @@ import { propToStyle } from '../../../theme/utils/propToStyle';
       }),
     });
   }}
+
+  ${({ order }) => order && css`
+    ${breakpointsMedia({
+      xs: css`
+        order: -1;
+      `,
+      lg: css`
+        order: 1;
+      `
+    })}
+  `}
 `;
 
 Col.defaultProps = {

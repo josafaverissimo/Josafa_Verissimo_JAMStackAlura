@@ -6,6 +6,7 @@ export const CapaWrapper = styled.div`
   justify-content: center;
   flex-direction: column;
   width: 100%;
+  max-height: 95vh;
 
   h1, p {
     font-family: 'Fira Sans Condensed', sans-serif;

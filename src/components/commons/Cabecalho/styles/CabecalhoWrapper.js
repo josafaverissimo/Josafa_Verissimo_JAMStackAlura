@@ -7,5 +7,4 @@ export const CabecalhoWrapper = styled.div`
   min-height: 5vh;
   background: #FFF8E6;
   border-top: 2px solid #E9C46A;
-  margin-bottom: 64px;
 `;
