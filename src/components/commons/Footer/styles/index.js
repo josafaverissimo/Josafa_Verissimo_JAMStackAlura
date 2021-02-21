@@ -1,7 +1,7 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const FooterItemsWrapper = styled.div`
-  background-color: #E9C46A;
+  background-color: ${({ theme }) => theme.colors.primary.main.color};
   padding: 16px 60px;
   margin: auto 0;
   
@@ -13,7 +13,7 @@ export const FooterItemsWrapper = styled.div`
     width: 32px;
     height: 32px;
   }
-`
+`;
 
 export const FooterWrapper = styled.div`
   display: flex;
@@ -21,5 +21,5 @@ export const FooterWrapper = styled.div`
 
   width: 100%;
   min-height: 5vh;
-  background: #FFF8E6;
-`
+  background: ${({ theme }) => theme.colors.secondary.main.color};
+`;

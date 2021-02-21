@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ProjectsWrapper = styled.div`
-  margin: 0 auto;
-  background: #fff;
-`
+export default styled.div`
+  background: ${({ theme }) => theme.colors.background.main.color};
+  width: 100%;
+`;

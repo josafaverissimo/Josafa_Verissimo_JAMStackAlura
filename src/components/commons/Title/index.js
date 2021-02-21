@@ -2,30 +2,30 @@ import styled, { css } from 'styled-components';
 import { breakpointsMedia } from '../../../theme/utils/breakpointsMedia';
 import { propToStyle } from '../../../theme/utils/propToStyle';
 
-export const Title = styled.div`
-  ${propToStyle("textAlign")}
+export default styled.div`
+  /* ${propToStyle('textAlign')}
 
-  ${propToStyle("margin")}
+  ${propToStyle('margin')}
 
   h1 {
-    ${propToStyle("width")}
+    ${propToStyle('width')}
     font-size: 4rem;
     padding: 0;
     margin: 0;
 
     ${breakpointsMedia({
-      xs: css`
+    xs: css`
         font-size: 4rem;
       `,
-      sm: css`
+    sm: css`
         font-size: 5rem;
-      `
-    })}
+      `,
+  })}
 
-    ${propToStyle("margin")}
-    ${propToStyle("fontWeight")}
-    ${propToStyle("fontSize")}
-    ${propToStyle("fontFamily")}
+    ${propToStyle('margin')}
+    ${propToStyle('fontWeight')}
+    ${propToStyle('fontSize')}
+    ${propToStyle('fontFamily')}
   }
 
   p {
@@ -34,18 +34,18 @@ export const Title = styled.div`
     padding: 0;
 
     ${breakpointsMedia({
-      xs: css`
+    xs: css`
         font-size: 4rem;
       `,
-      sm: css`
+    sm: css`
         font-size: 5rem;
-      `
-    })}
+      `,
+  })}
 
-    ${propToStyle("margin")}
-    ${propToStyle("fontWeight")}
-    ${propToStyle("fontSize")}
-    ${propToStyle("fontFamily")}
-  }
-  
+    ${propToStyle('margin')}
+    ${propToStyle('fontWeight')}
+    ${propToStyle('fontSize')}
+    ${propToStyle('fontFamily')}
+  } */
+
 `;

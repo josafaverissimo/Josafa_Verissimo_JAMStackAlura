@@ -2,8 +2,8 @@ import styled, { css } from 'styled-components';
 import { breakpointsMedia } from '../../../../theme/utils/breakpointsMedia';
 
 const Wrapper = styled.div`
-  border: .125rem solid #E9C46A;
-  background: #fff;
+  border: .125rem solid ${({ theme }) => theme.colors.primary.main.color};
+  background: ${({ theme }) => theme.colors.background.main.color};
   box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.2);
   transition: .2s box-shadow ease-in-out;
   border-radius: 8px;
@@ -12,28 +12,31 @@ const Wrapper = styled.div`
       content: "Destaque";
       position: absolute;
       height: 20px;
-      background: #fff;
       text-align: center;
-      border: 1px solid #000;
+      
+      ${({ theme }) => css`
+        background: ${theme.colors.background.main.color};
+        border: 1px solid ${theme.colors.borders.main.color};
+        font-family: ${theme.fontFamily}
+      `};
+
       padding: 10px 64px;
       margin: 10px;
     }
 
     ${breakpointsMedia({
-      lg: css`
+    lg: css`
         display: flex;
-      `
-    })}
-  ` }
+      `,
+  })}
+  `}
 
   &:hover {
     box-shadow: 0 14px 25px rgba(0,0,0,.16);
   }
 
   margin-bottom: 30px;
-
-  font-family: "Fira Sans Condensed", sans-serif;
-`
+`;
 
 const Header = styled.div`
   img {
@@ -45,7 +48,7 @@ const Header = styled.div`
   
   ${({ highlighted }) => highlighted && css`
     ${breakpointsMedia({
-      lg: css`
+    lg: css`
         width: 70%;
 
         img {
@@ -53,15 +56,13 @@ const Header = styled.div`
           border-top-right-radius: 0px;
           border-bottom-right-radius: 0px;
         }
-      `
-    })}
+      `,
+  })}
   `}
-`
+`;
 
-const Text = styled.div`
+const TextWrapper = styled.div`
   h1 {
-    font-size: 32px;
-    line-height: 38px;
     text-align: center;
   }
 
@@ -71,7 +72,7 @@ const Text = styled.div`
 
   ${({ highlighted }) => highlighted && css`
     ${breakpointsMedia({
-      lg: css`
+    lg: css`
         width: 30%;
         margin: auto 30px;
 
@@ -82,13 +83,13 @@ const Text = styled.div`
         p {
           display: block;
         }
-      `
-    })}
+      `,
+  })}
   `}
-`
+`;
 
-export const Base = {
+export default {
   Wrapper,
   Header,
-  Text
+  TextWrapper,
 };

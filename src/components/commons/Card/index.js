@@ -1,19 +1,28 @@
 import React from 'react';
-import { Base } from './styles/Base';
+import PropTypes from 'prop-types';
+import Base from './styles/Base';
+import Text from '../../foundation/Text';
 
-export default function Card({header, description, img, highlighted}) {
+export default function Card({
+  header, description, img, highlighted,
+}) {
   return (
     <Base.Wrapper highlighted={highlighted}>
       <Base.Header highlighted={highlighted}>
-        <img src={img} />
+        <img src={img} alt="Imagem do card" />
       </Base.Header>
 
-      <Base.Text highlighted={highlighted}>
-        <div>
-          <h1>{header}</h1>
-          <p>{description}</p>
-        </div>
-      </Base.Text>
-    </Base.Wrapper>    
-  )
+      <Base.TextWrapper highlighted={highlighted}>
+        <Text tag="h1" variant="titleCard" color="background.main.contrastText">{header}</Text>
+        <Text tag="p" variant="paragraph1" color="background.main.contrastText">{description}</Text>
+      </Base.TextWrapper>
+    </Base.Wrapper>
+  );
 }
+
+Card.propTypes = {
+  header: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
+  highlighted: PropTypes.bool.isRequired,
+};

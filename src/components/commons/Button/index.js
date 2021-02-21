@@ -1,20 +1,20 @@
-import styled, { css } from 'styled-components'
+import styled, { css } from 'styled-components';
 
-export const Button = styled.button`
+export default styled.button`
   font-family: 'Fira Sans Condensed', sans-serif;
-  color: ${(props) => props.color ? props.color : "#fff"};
+  color: ${({ theme }) => theme.colors.primary.main.contrastText};
   font-size: 1.125rem;
   border: none;
 
-  ${(props) => {
-    if(!!props.ghost) {
+  ${({ ghost }) => {
+    if (ghost) {
       return css`
+        color: ${({ theme }) => theme.colors.secondary.main.contrastText};
         background: none;
-      `
-    } else {
-      return css`
-        background: #E9C46A;
-      `
+      `;
     }
+    return css`
+        background: ${({ theme }) => theme.colors.primary.main.color};
+      `;
   }}
-`
+`;

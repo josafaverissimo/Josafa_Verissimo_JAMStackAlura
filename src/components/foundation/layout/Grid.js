@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components';
 import { breakpointsMedia } from '../../../theme/utils/breakpointsMedia';
-import { propToStyle } from '../../../theme/utils/propToStyle';
+import propToStyle from '../../../theme/utils/propToStyle';
 
- const Col = styled.div`
+const Col = styled.div`
   padding-right: 16px;
   padding-left: 16px;
   flex-basis: 0;
@@ -85,13 +85,13 @@ import { propToStyle } from '../../../theme/utils/propToStyle';
 
   ${({ order }) => order && css`
     ${breakpointsMedia({
-      xs: css`
+    xs: css`
         order: -1;
       `,
-      lg: css`
+    lg: css`
         order: 1;
-      `
-    })}
+      `,
+  })}
   `}
 `;
 
@@ -100,7 +100,7 @@ Col.defaultProps = {
   offset: {},
 };
 
-export const Grid = {
+export default {
   Container: styled.div`
     width: 100%;
     padding-right: 28px;
@@ -135,7 +135,7 @@ export const Grid = {
     flex-wrap: wrap;
     margin-right: -16px;
     margin-left: -16px;
-    ${propToStyle("justifyContent")}
+    ${propToStyle('justifyContent')}
   `,
   Col,
-}; 
+};
